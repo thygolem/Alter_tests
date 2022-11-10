@@ -5,81 +5,68 @@ using UnityEngine;
 
 public interface ISoundMaker
 {
-    bool MakeSound();
+    // defino el contrato de la interfaz
+    void MakeSound();
 
-    // bool Crow();
-    // bool Owl();
-    // bool Duck();
 }
 
 
 public class Crow : ISoundMaker
 {
-    private bool noise;
+    private int numberOfAaaaarghs;
 
-    public Crow(bool noise)
+    public Crow(int number)
     {
-        this.noise = noise;
+        this.numberOfAaaaarghs = number;
     }
 
-    public bool MakeSound()
+    public void MakeSound()
     {
-        return noise;
+        for (int i = 0; i < numberOfAaaaarghs; i++)
+        {
+            Debug.Log("Aaaargh");
+        }
     }
+
 }
 
 
 public class Owl : ISoundMaker
 {
-    private bool noise;
 
-    public Owl(bool noise)
+    public void MakeSound()
     {
-        this.noise = noise;
+            Debug.Log("Uhhhh");
     }
 
-    public bool MakeSound()
-    {
-        return noise;
-    }
 }
 
 
 public class Duck : ISoundMaker
 {
-    private bool noise;
 
-    public Duck(bool noise)
+    public void MakeSound()
     {
-        this.noise = noise;
+            Debug.Log("Cuac cuac");
     }
 
-    public bool MakeSound()
-    {
-        return noise;
-    }
 }
-
-
-
-
-
-
-
-
 
 
 public class Ejercicio72 : MonoBehaviour
 {
     private void Awake()
     {
-        ISoundMaker sound = new Crow(noise:true);
-        Debug.Log($"Play crow");
-        
-        sound = new Owl(noise:true);
-        Debug.Log($"Play owl");
+        ISoundMaker soundMaker = new Crow(3);
+        soundMaker.MakeSound();
 
-        sound = new Duck(noise:true);
-        Debug.Log($"Play duck");
+
+        soundMaker = new Owl();
+        soundMaker.MakeSound();
+
+
+        soundMaker = new Duck();
+        soundMaker.MakeSound();
+
     }
 }
