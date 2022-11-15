@@ -14,3 +14,5 @@
 - Locrian       -> Awful Brown (like all painting colors mixed)
 
 
+# [Crear mapas automáticamente](https://www.youtube.com/watch?v=xbHOuq0RuhI&ab_channel=GeekerEN)
+

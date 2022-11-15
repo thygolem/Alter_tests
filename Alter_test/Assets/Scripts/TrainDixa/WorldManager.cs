@@ -18,6 +18,7 @@ namespace Scripts.TrainDixa
         [SerializeField] float _minTimeBtweenBalls = 1f;
         [SerializeField] float _maxTimeBtweenBalls = 4f;
         [SerializeField] ScoreManager scoreManager;
+        [SerializeField] ParticleSystem explosionParticle;
 
 
         int ballsCounter = 0;
@@ -34,6 +35,9 @@ namespace Scripts.TrainDixa
 
             if (scoreManager == null) throw new Exception("scoreManager no asignado"); // Programación por eventos.
             _groundController.OnGameOverEvent += OnGameOverEvent;
+
+
+            if (explosionParticle == null) throw new Exception("ERROR, sin particulas");
 
             StartCoroutine(CreateBalls());
 
@@ -76,6 +80,10 @@ namespace Scripts.TrainDixa
             // Debug.Log(ballController.GetBallValue());
             // Debug.Log("Has pinchado la pelota");
             scoreManager.AddScore(ballController.GetBallValue());
+            var particle = Instantiate(explosionParticle,
+                        ballController.transform.position, 
+                        Quaternion.identity); // Otro tipo de 
+            Destroy(particle.gameObject, particle.main.duration);
             Destroy(ballController.gameObject);
             ballsCounter--;
             StartCoroutine(CreateBalls());
