@@ -27,7 +27,7 @@ namespace Scripts.TrainDixa
             }
             _tMP_score.text = $"Score: {score}";
             _tMP_highScore.text = $"High Score: {highScore}";
-            Debug.Log(highScore);
+            // Debug.Log(highScore);
         }
 
         public void AddScore(int scoreToAdd)
@@ -49,6 +49,12 @@ namespace Scripts.TrainDixa
 
                 // https://docs.unity3d.com/2020.3/Documentation/ScriptReference/PlayerPrefs.html
             }
+        }
+
+        internal void ResetScore()
+        {
+            score = 0;
+            _tMP_score.text = $"Score: {score}";
         }
     }
 }
