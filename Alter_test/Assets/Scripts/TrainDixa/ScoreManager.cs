@@ -18,6 +18,10 @@ namespace Scripts.TrainDixa
         int score;
         int highScore;
 
+
+
+        // public event Action<ScoreManager> OnColorChangeEvent;
+
         private void Awake()
         {
             if (_tMP_score == null || _tMP_highScore == null) throw new Exception("Scores sin asignar");
@@ -35,6 +39,18 @@ namespace Scripts.TrainDixa
             score += scoreToAdd;
             Debug.Log(score);
             _tMP_score.text = $"Score: {score}";
+
+            // ****************************************************************************************
+
+            // Aqui el scoremanager pregunta si el score es mayor de x
+
+            // envia una señal a worldManager para que cambie el color de las pelotas  
+
+            // ****************************************************************************************
+            // OnColorChangeEvent?.Invoke(this);
+
+            // if (score > 100) WorldManager.ChangeBallSaturation("grey");
+
 
         }
 

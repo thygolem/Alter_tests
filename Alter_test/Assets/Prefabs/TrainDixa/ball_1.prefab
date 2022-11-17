@@ -46,8 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8aadbbd18f87544ba097f42c1b57df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minRandomness: 0
-  _maxRandomness: 0
+  _nivelJugador: 0
 --- !u!212 &1559946908828726703
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -87,7 +86,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0

@@ -19,6 +19,7 @@ namespace Scripts.TrainDixa
         [SerializeField] float _minTimeBtweenBalls = 1f;
         [SerializeField] float _maxTimeBtweenBalls = 4f;
         [SerializeField] ScoreManager scoreManager;
+        [SerializeField] BallController ballController;
         [SerializeField] ParticleSystem explosionParticle;
         [SerializeField] Button _playButton;
 
@@ -47,6 +48,7 @@ namespace Scripts.TrainDixa
 
 
             // StartCoroutine(CreateBalls());
+            
 
 
 
@@ -70,9 +72,13 @@ namespace Scripts.TrainDixa
         IEnumerator CreateBalls()
         {
             // El problema de la creación de varias bolas se debe al tiempo de espera, por eso ponemos el if después.
-            var randomTime = Random.Range(_minTimeBtweenBalls, _maxTimeBtweenBalls);
-
-            yield return new WaitForSeconds(randomTime);
+            /*------------------------------
+                        ORIGINAL
+            // var randomTime = Random.Range(_minTimeBtweenBalls, _maxTimeBtweenBalls);
+            // yield return new WaitForSeconds(randomTime);
+                        ORIGINAL
+            ------------------------------- */
+            yield return new WaitForSeconds(_minTimeBtweenBalls);
 
             if (balls.Count < _MaxNumberOfBalls)
             {
@@ -145,5 +151,24 @@ namespace Scripts.TrainDixa
         }
 
 
+        private void ChangeBallSaturation(ScoreManager score)
+        {
+            
+            // Debug.Log(scoreManager.score);
+            
+            // Debug.Log(score.GetType());
+
+
+            // switch(score)
+            // {
+            //     case < 100:
+            //         Debug.Log("gris");
+            //         ballController.ChangeSaturation("grey");
+            //         break;
+            // }
+
+
+
+        }
     }
 }
