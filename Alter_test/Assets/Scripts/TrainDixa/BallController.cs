@@ -11,6 +11,7 @@ namespace Scripts.TrainDixa
     {
         // Definimos el evento con la información de la propia (this) pelota
         public event Action<BallController> OnBallDestroyedEvent;
+        // public event Action<BallController> ChangeSaturation;
 
         [SerializeField, Tooltip("Punto por pelota")] int ballValue = 10;
 
@@ -36,7 +37,7 @@ namespace Scripts.TrainDixa
         }
 
 
-        internal void ChangeSaturation(string color)
+        private void ChangeSaturation(string color)
         {
             // switch(color)
             // {
