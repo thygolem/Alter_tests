@@ -11,7 +11,7 @@ namespace Scripts.Arkanoid
     {
         [SerializeField, Tooltip("Configura la velocidad"), Range(1f, 10f)] float speed = 2;
 
-        public event Action onBallRelease; // evento!
+        public event Action onBallReleaseEvent; // evento!
         new Rigidbody2D rigidbody2D;
         private Vector2 velocity;
 
@@ -26,10 +26,10 @@ namespace Scripts.Arkanoid
             // cogemos el INPUT(*1) GetAxisRaw=valores -1, 0, 1
             velocity = new Vector2(Input.GetAxisRaw(Constants.HORIZONTAL) * speed, 0f); // vector2 = (x, y)
             // Input.GetAxis("Horizontal"); // valores decimales
-            if(Input.GetAxisRaw(Constants.FIRE)!= 0)
+            if(Input.GetAxisRaw(Constants.FIRE)!= 0 && !isBallReleased)
             {
                 isBallReleased = true;
-                onBallRelease?.Invoke(); // evento, que necesita un Action para que un método se suscriba
+                onBallReleaseEvent?.Invoke(); // evento, que necesita un Action para que un método se suscriba
             }
         }
 

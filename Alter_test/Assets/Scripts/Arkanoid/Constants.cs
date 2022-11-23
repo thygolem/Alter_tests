@@ -4,8 +4,7 @@ namespace Scripts.Arkanoid
     {
         public const string HORIZONTAL = "Horizontal";
         public const string FIRE = "Jump";
-
-        
+        public const string BALLTAG = "BALL";
 
     }
 
