@@ -8,7 +8,7 @@ namespace Scripts.Arkanoid
 {
     public class PlayerManager : MonoBehaviour
     {
-        [SerializeField, Range(1, 5), Tooltip("Numero de vidas iniciales")] int lives = 3;
+        // [SerializeField, Range(1, 5), Tooltip("Numero de vidas iniciales")] int lives = 3;
 
         public event Action<int> OnScoreUpdatedEvent;
         int score;
