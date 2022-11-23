@@ -6,9 +6,6 @@ using UnityEngine;
 
 
 
-
-
-
 namespace Scripts.TrainDixa
 {
     public class PlayerTracker : MonoBehaviour
@@ -19,6 +16,7 @@ namespace Scripts.TrainDixa
         [SerializeField, Range(0.1f, 2f)] float duration = 0.5f;
 
         [SerializeField, Tooltip("Must wait previous animation to end?")] bool mustWaitUntilEnd = true;
+
 
         Transform myTransform;
 
