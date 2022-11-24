@@ -16,10 +16,13 @@ namespace Scripts.Arkanoid
         private Vector2 velocity;
 
         bool isBallReleased;
+        private Vector2 initialPosition;
+
         private void Awake()
         {
             rigidbody2D = GetComponent<Rigidbody2D>(); // cacheamos la variable del objeto al que le asignamoes este script
             isBallReleased = false;
+            initialPosition = transform.position;
         }
         void Update()
         {
@@ -39,5 +42,10 @@ namespace Scripts.Arkanoid
             rigidbody2D.velocity = velocity;
         }
 
+        internal void Reset()
+        {
+            isBallReleased = false;
+            transform.position = initialPosition;
+        }
     }
 }

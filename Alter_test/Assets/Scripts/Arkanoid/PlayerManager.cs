@@ -8,21 +8,32 @@ namespace Scripts.Arkanoid
 {
     public class PlayerManager : MonoBehaviour
     {
-        // [SerializeField, Range(1, 5), Tooltip("Numero de vidas iniciales")] int lives = 3;
+        // Player manager es el responsable de perder vida
+        [SerializeField, Range(1, 5), Tooltip("Numero de vidas iniciales")] int lives = 3;
 
-        public event Action<int> OnScoreUpdatedEvent;
+        [SerializeField] UIManager uIManager;
+        public event Action<int> OnScoreUpdatedEvent; // para dislexia
         int score;
+
+
+        private void Awake() {
+            if (uIManager == null) throw new Exception("falta uIManager");
+            uIManager.UpdateScore(score);
+            uIManager.UpdateLives(lives);
+        }
 
         internal void AddScore(int scoreToAdd)
         {   
             score+= scoreToAdd;
-            OnScoreUpdatedEvent?.Invoke(score);
+            OnScoreUpdatedEvent?.Invoke(score); // para dislexia
+            uIManager.UpdateScore(score);
         }
 
-        private void Awake() {
-            
+        internal void LoseLife()
+        {
+            lives--;
+            uIManager.UpdateLives(lives);
         }
-
 
     }
 }

@@ -20,7 +20,7 @@ namespace Scripts.Arkanoid
         // public event Action<int> OnBrickDestroyedEvent; // alternativa(*2) si quisieramos enviar solo el dato de score
 
         private void Awake() {
-            if(score <= 0) throw new Exception("ERROR puntuación no valida");
+            if(score < 0) throw new Exception("ERROR puntuación no valida");
         }
 
         private void OnCollisionEnter2D(Collision2D other)
