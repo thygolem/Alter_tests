@@ -7,13 +7,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9089633409623838184, guid: 18cb59bd93c889f4f99a5bc90d33680e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089633409623838184, guid: 18cb59bd93c889f4f99a5bc90d33680e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.14970064
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089633409623838184, guid: 18cb59bd93c889f4f99a5bc90d33680e, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9089633409623838186, guid: 18cb59bd93c889f4f99a5bc90d33680e, type: 3}
       propertyPath: m_Name
       value: Brick_3
       objectReference: {fileID: 0}
     - target: {fileID: 9089633409623838190, guid: 18cb59bd93c889f4f99a5bc90d33680e, type: 3}
+      propertyPath: score
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9089633409623838190, guid: 18cb59bd93c889f4f99a5bc90d33680e, type: 3}
       propertyPath: resistance
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9089633409623838191, guid: 18cb59bd93c889f4f99a5bc90d33680e, type: 3}
       propertyPath: m_RootOrder

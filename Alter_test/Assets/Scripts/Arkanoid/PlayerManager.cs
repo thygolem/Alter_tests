@@ -15,16 +15,27 @@ namespace Scripts.Arkanoid
         public event Action<int> OnScoreUpdatedEvent; // para dislexia
         int score;
 
+        static PlayerManager instance;
+        private void Awake()
+        {
 
-        private void Awake() {
-            if (uIManager == null) throw new Exception("falta uIManager");
-            uIManager.UpdateScore(score);
-            uIManager.UpdateLives(lives);
+            if (instance == null)
+            {
+                instance = this;
+                if (uIManager == null) throw new Exception("falta uIManager");
+                uIManager.UpdateScore(score);
+                uIManager.UpdateLives(lives);
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
 
         internal void AddScore(int scoreToAdd)
-        {   
-            score+= scoreToAdd;
+        {
+            score += scoreToAdd;
             OnScoreUpdatedEvent?.Invoke(score); // para dislexia
             uIManager.UpdateScore(score);
         }
@@ -35,5 +46,9 @@ namespace Scripts.Arkanoid
             uIManager.UpdateLives(lives);
         }
 
+        internal static PlayerManager GetInstance()
+        {
+            return instance;
+        }
     }
 }

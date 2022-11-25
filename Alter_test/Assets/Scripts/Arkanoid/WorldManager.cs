@@ -11,21 +11,24 @@ namespace Scripts.Arkanoid
     public class WorldManager : MonoBehaviour
     {
         [SerializeField] BallController ballController;
-
         [SerializeField] VausController vausController;
-        // [SerializeField] BrickController brickController;
-        [SerializeField] PlayerManager playerManager;
-        [SerializeField] LevelManager levelManager;
 
+        // [SerializeField] LevelManager levelManager;
         [SerializeField] DeadZoneController deadZoneController;
+        // [SerializeField] BrickController brickController;
+        LevelManager levelManager;
+        PlayerManager playerManager;
         List<GameObject> bricksGOs;
 
-        private void Awake()
+        private void Start()
         {
-            vausController.onBallReleaseEvent += OnBallReleaseHandler;
-            playerManager.OnScoreUpdatedEvent += OnScoreUpdatedHandler; // PARA DISLEXIA IRIA AQUI
-            deadZoneController.OnEnterDeadZoneEvent += OnEnterDeadZoneHandler;
 
+            playerManager = PlayerManager.GetInstance();
+            levelManager = LevelManager.GetInstance();
+
+            vausController.onBallReleaseEvent += OnBallReleaseHandler;
+            playerManager.OnScoreUpdatedEvent += OnScoreUpdatedHandler;
+            deadZoneController.OnEnterDeadZoneEvent += OnEnterDeadZoneHandler;
             SetUpBricks();
         }
 
