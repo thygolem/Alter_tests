@@ -12,7 +12,7 @@ namespace Scripts.Arkanoid
     {
         // Se suele utilizar instance para indicar la unica instancia del patron singleton
         static LevelManager instance;
-        int levelId;
+        [SerializeField] int levelId;
 
         private void Awake()
         {
@@ -30,7 +30,8 @@ namespace Scripts.Arkanoid
         internal void NextLevel()
         {
             levelId++;
-            SceneManager.LoadScene("Arkanoid2");
+            // if(levelId == 3){levelId = 0;}
+            SceneManager.LoadScene($"Arkanoid{levelId}");
         }
 
 

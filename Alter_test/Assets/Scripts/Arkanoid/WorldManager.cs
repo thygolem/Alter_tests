@@ -15,6 +15,7 @@ namespace Scripts.Arkanoid
 
         // [SerializeField] LevelManager levelManager;
         [SerializeField] DeadZoneController deadZoneController;
+        [SerializeField] PowerUpController powerUpController;
         // [SerializeField] BrickController brickController;
         LevelManager levelManager;
         PlayerManager playerManager;
@@ -29,9 +30,31 @@ namespace Scripts.Arkanoid
             vausController.onBallReleaseEvent += OnBallReleaseHandler;
             playerManager.OnScoreUpdatedEvent += OnScoreUpdatedHandler;
             deadZoneController.OnEnterDeadZoneEvent += OnEnterDeadZoneHandler;
+            powerUpController.OnVausTriggerEvent += OnVausTriggerHandler; 
+
+
             SetUpBricks();
         }
 
+        private void OnVausTriggerHandler(PowerUpController powerUp)
+        {
+            switch (powerUp.GetPowerUpType())
+            {
+                case PowerUpType.Stretch:
+                    vausController.Stretch();
+                    break;
+                case PowerUpType.Shrink:
+                    break;
+                case PowerUpType.Shoot:
+                    break;
+                case PowerUpType.Subdivide:
+                    break;
+            }
+            powerUpController.OnVausTriggerEvent -= OnVausTriggerHandler;
+            Destroy(powerUpController.gameObject);
+            Debug.Log(" cambios vaus hechos");
+
+        }
 
         private void SetUpBricks()
         {
