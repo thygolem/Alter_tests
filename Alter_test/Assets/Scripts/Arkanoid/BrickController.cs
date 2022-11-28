@@ -10,6 +10,8 @@ namespace Scripts.Arkanoid
     {
         [SerializeField, Range(1, 5)] int resistance = 1;
         [SerializeField] int score;
+
+        [SerializeField] PowerUpController powerUpController;
         public event Action<BrickController> OnBrickDestroyedEvent;
 
         internal int GetScore()
@@ -36,7 +38,25 @@ namespace Scripts.Arkanoid
             }
         }
 
+        // internal int GetScore()
+        // {
+        //     return score;
+        // }
 
+        public bool HasPowerUp()
+        {
+            return powerUpController != null;
+        }
+
+        public void SetPowerUp(PowerUpController powerUpController)
+        {
+            this.powerUpController = powerUpController;
+        }
+
+        public PowerUpController GetPowerUp()
+        {
+            return powerUpController;
+        }
 
 
     }

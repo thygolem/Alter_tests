@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 
@@ -21,6 +22,9 @@ namespace Scripts.Arkanoid
         PlayerManager playerManager;
         List<GameObject> bricksGOs;
 
+        [SerializeField] PowerUpController [] powerUpPrefabs; /////////////// ?
+
+
         private void Start()
         {
 
@@ -32,9 +36,51 @@ namespace Scripts.Arkanoid
             deadZoneController.OnEnterDeadZoneEvent += OnEnterDeadZoneHandler;
             powerUpController.OnVausTriggerEvent += OnVausTriggerHandler; 
 
-
             SetUpBricks();
+            SetUpPowerUps();
         }
+
+        private void SetUpPowerUps()
+        {
+            foreach (var brickGO in bricksGOs)
+            {
+                var brickController = brickGO.GetComponent<BrickController>();
+                if (brickController.HasPowerUp())
+                {
+                    var powerUp = brickController.GetPowerUp();
+                    powerUp.gameObject.SetActive(false);
+                    powerUp.transform.position = brickController.transform.position;
+                    powerUp.OnVausTriggerEvent += OnVausTriggerHandler;
+                }
+            }
+            // CreatePowerUps();
+        }
+
+        // private void CreatePowerUps()
+        // {
+        //     bool hasFinished = false;
+        //     while (!hasFinished)
+        //     {
+        //         // elegir un ladrillo
+        //         int brickIndex = Random.Range(0, bricksGOs.Count);
+
+        //         var brickController = bricksGOs[brickIndex].GetComponent<BrickController>();
+        //         // Comporbar si tiene powerup
+        //         if (brickController.HasPowerUp())
+        //         {
+        //             //  Si no lo tiene, le añado power up
+        //             var powerUpPrefabIndex = Random.Range(0, powerUpPrefabs.Length);
+        //             var powerUpGO = Instantiate(powerUpPrefabs[powerUpPrefabIndex]);
+        //             brickController.SetPowerUp(powerUpGO.GetComponent<PowerUpController>());
+        //             // hay que reubicar el prefab
+        //             //  Actualizo nº de powerups
+        //             numberOfPowerUpsToAdd --;
+        //             //  pregunto si ha terminado
+        //             // comprobar si ha creado todos los powerups
+
+        //         }
+        //     }
+        // }
 
         private void OnVausTriggerHandler(PowerUpController powerUp)
         {
@@ -44,6 +90,7 @@ namespace Scripts.Arkanoid
                     vausController.Stretch();
                     break;
                 case PowerUpType.Shrink:
+                    vausController.Shrink();
                     break;
                 case PowerUpType.Shoot:
                     break;
@@ -89,13 +136,20 @@ namespace Scripts.Arkanoid
             bricksGOs.Remove(brickController.gameObject);
             playerManager.AddScore(brickController.GetScore()); // usar patron singleton
             // Debug.Log("El ladrillo se destruye");
-            Destroy(brickController.gameObject);
+
+            if(brickController.HasPowerUp())
+            {
+                PowerUpController powerUpController = brickController.GetPowerUp();
+                powerUpController.gameObject.SetActive(true);
+                // Guardar los powerups
+            }
 
             if (bricksGOs.Count == 0)
             {
                 Debug.Log("Paso de nivel");
                 levelManager.NextLevel();
             }
+            Destroy(brickController.gameObject);
         }
 
         private void OnBallReleaseHandler()
