@@ -8,6 +8,7 @@ TagManager:
   - VAUS
   - BRICK
   - DEADZONE
+  - BAT
   layers:
   - Default
   - TransparentFX

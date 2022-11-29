@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using System;
+using Random = UnityEngine.Random;
 // using UnityEngine.AI;
 
 
-namespace Scripts.TrainDixa
+namespace Scripts.Dislexia
 {
     public class WaypointFollower : MonoBehaviour
     {
@@ -52,6 +53,7 @@ namespace Scripts.TrainDixa
 
         IEnumerator Move()
         {
+            yield return new WaitForSeconds(2);
             transform.position = Vector2.MoveTowards(transform.position, 
                                                     waypoints[waypointIndex].transform.position,
                                                     moveSpeed * Time.deltaTime);
@@ -62,7 +64,7 @@ namespace Scripts.TrainDixa
             if (waypointIndex == waypoints.Length)
             {
                 waypointIndex = 0;
-            }yield return new WaitForSeconds(2);
+            }
         }
 
         // IEnumerator Tracker()
