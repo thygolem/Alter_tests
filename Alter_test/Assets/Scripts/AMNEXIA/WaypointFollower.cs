@@ -43,7 +43,7 @@ namespace Scripts.Dislexia
         {
             // GetComponent<NavMeshAgent> ().SetDestination(waypoints[0].position);
             // GetComponent<NavMeshAgent> ().SetDestination(waypoints[0].transform.position);
-        
+
         }
         private void Update()
         {
@@ -53,17 +53,19 @@ namespace Scripts.Dislexia
 
         IEnumerator Move()
         {
-            yield return new WaitForSeconds(2);
-            transform.position = Vector2.MoveTowards(transform.position, 
+            transform.position = Vector2.MoveTowards(transform.position,
                                                     waypoints[waypointIndex].transform.position,
                                                     moveSpeed * Time.deltaTime);
             if (transform.position == waypoints[waypointIndex].transform.position)
             {
-                waypointIndex +=1; // make it random
+                waypointIndex += 1; // make it random
+                yield return new WaitForSeconds(2);
             }
             if (waypointIndex == waypoints.Length)
             {
                 waypointIndex = 0;
+                yield return new WaitForSeconds(2);
+
             }
         }
 
