@@ -16,3 +16,7 @@
 
 # [Crear mapas automáticamente](https://www.youtube.com/watch?v=xbHOuq0RuhI&ab_channel=GeekerEN)
 
+## HACER REFLEXIÓN
+- PARA CONECTAR CON PYTHON HAY QUE USAR RELFEXIÓN (wrapper) para que se comunique a través de c++
+- [posible ejemplo](https://www.c-sharpcorner.com/article/generate-python-wrapper-for-c-sharp-methods-using-reflection/)
+
