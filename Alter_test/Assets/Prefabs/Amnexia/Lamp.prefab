@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3161648455957937855}
   - component: {fileID: 3161648455957937854}
   - component: {fileID: 3161648455957937824}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3161648457198481399}
   - component: {fileID: 3161648457198481400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LightandShadow (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3161648457222613164}
   - component: {fileID: 3161648457222613165}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LightandShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

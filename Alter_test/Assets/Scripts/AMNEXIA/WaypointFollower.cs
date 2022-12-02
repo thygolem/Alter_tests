@@ -33,9 +33,14 @@ namespace Scripts.Dislexia
             // Debug.Log($"Primera posición{waypoints[0]}");
             // myTransform = transform;
             // myTransform = waypoints[0].transform;
-            transform.position = waypoints[waypointIndex].transform.position;
-
-
+            if (waypoints.Length != 0)
+            {
+                transform.position = waypoints[waypointIndex].transform.position;
+            }
+            else
+            {
+                
+            }
         }
 
 
@@ -67,6 +72,7 @@ namespace Scripts.Dislexia
                 yield return new WaitForSeconds(2);
 
             }
+            yield return new WaitForSeconds(2);
         }
 
         // IEnumerator Tracker()
