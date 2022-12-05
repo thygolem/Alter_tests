@@ -1,0 +1,302 @@
+fileFormatVersion: 2
+guid: 84a1b15a028fe504595f0ea93b8311d4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3958170772265320929
+    second: front_arm
+  - first:
+      213: -3600091380385283218
+    second: rear_arm
+  - first:
+      213: 5232593591008781786
+    second: torso
+  - first:
+      213: -2128072772741645107
+    second: head
+  - first:
+      213: 8309137905454444884
+    second: front_leg
+  - first:
+      213: -4839145616926071602
+    second: rear_leg
+  - first:
+      213: 4238516767302989025
+    second: mouth
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: front_arm
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 337
+        width: 106
+        height: 341
+      alignment: 9
+      pivot: {x: 0.51100117, y: 0.81803185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e14539985f3ee630800000000000000
+      internalID: 3958170772265320929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rear_arm
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 343
+        width: 102
+        height: 322
+      alignment: 9
+      pivot: {x: 0.35137716, y: 0.80058277}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e638031b6f7e90ec0800000000000000
+      internalID: -3600091380385283218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: torso
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 353
+        width: 174
+        height: 320
+      alignment: 9
+      pivot: {x: 0.4195781, y: 0.13923264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: 160}
+        - {x: -34, y: 160}
+        - {x: -87, y: 84}
+        - {x: -87, y: -145}
+        - {x: -74, y: -160}
+        - {x: 24, y: -160}
+        - {x: 40, y: -153}
+        - {x: 87, y: -69}
+        - {x: 87, y: 46}
+        - {x: 69, y: 150}
+      - - {x: -82, y: -36}
+        - {x: -83, y: -44}
+        - {x: -83, y: -47}
+        - {x: -81, y: -48}
+        - {x: -77, y: -47}
+        - {x: -77, y: -36}
+        - {x: -79, y: -35}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad56016c528ed9840800000000000000
+      internalID: 5232593591008781786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: head
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 161
+        width: 325
+        height: 280
+      alignment: 9
+      pivot: {x: 0.08038246, y: 0.093480684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -73.5, y: 140}
+        - {x: -162.5, y: 54}
+        - {x: -162.5, y: -129}
+        - {x: -110.5, y: -140}
+        - {x: 130.5, y: -140}
+        - {x: 162.5, y: -114}
+        - {x: 162.5, y: 81}
+        - {x: 116.5, y: 140}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dccbd8496119772e0800000000000000
+      internalID: -2128072772741645107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: front_leg
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 10
+        width: 156
+        height: 295
+      alignment: 9
+      pivot: {x: 0.41029876, y: 0.92296445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451785cb6ecff4370800000000000000
+      internalID: 8309137905454444884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rear_leg
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 4
+        width: 156
+        height: 302
+      alignment: 9
+      pivot: {x: 0.39534858, y: 0.9208832}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4abb643b6e7dcb0800000000000000
+      internalID: -4839145616926071602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mouth
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 10
+        width: 330
+        height: 123
+      alignment: 9
+      pivot: {x: 0.47722206, y: 0.1682493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4b1a11b8c32da30800000000000000
+      internalID: 4238516767302989025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
