@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 
 
-namespace Scripts.Dislexia
+namespace Scripts.Amnexia
 {
 
     public class catchHit : MonoBehaviour

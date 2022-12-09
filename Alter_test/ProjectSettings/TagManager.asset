@@ -10,6 +10,8 @@ TagManager:
   - DEADZONE
   - BAT
   - GROUND
+  - Objects
+  - Back
   layers:
   - Default
   - TransparentFX
@@ -20,8 +22,8 @@ TagManager:
   - Ground
   - Ghost
   - Objects
-  - 
-  - 
+  - Bat
+  - Back
   - 
   - 
   - 
